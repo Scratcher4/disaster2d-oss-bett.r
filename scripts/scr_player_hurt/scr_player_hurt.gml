@@ -16,7 +16,8 @@ function scr_player_instakill()
 	global.player.hp = 0;
 	global.player.deadTimer = 31;
 	global.player.alarm[0] = 60;
-	global.player.rings = 0;
+	if global.player.rings < 10
+		global.player.rings = 0;
 	global.player.xspd = image_xscale * 2;
 	global.player.isGrounded = false;
 	global.player.isSpinning = false;
@@ -71,7 +72,7 @@ function scr_player_hurt(damage, xpw=4, ypw=-6, sndid=snd_hurt, blood=spr_blood1
 		{
 			if(global.character == CHARACTER_SALLY && global.player.shieldTimer > 0)
 			{
-				if(global.player.revivalTimes < 2 && global.player.hp <= 20)
+				if (global.player.revivalTimes < 2 && global.player.hp <= 20)
 				{
 					obj_achivements.rSallyShield++;
 					
@@ -95,7 +96,7 @@ function scr_player_hurt(damage, xpw=4, ypw=-6, sndid=snd_hurt, blood=spr_blood1
 			}
 		}
 			
-		if(global.player.revivalTimes < 2) // ignore if we're demonized
+		if (global.player.revivalTimes < 2 && global.player.rings < 10)// ignore if we're demonized
 		{
 			obj_achivements.wasHurt = true;
 			global.player.hp -= damage;
@@ -115,6 +116,18 @@ function scr_player_hurt(damage, xpw=4, ypw=-6, sndid=snd_hurt, blood=spr_blood1
 			buffer_write(pak, buffer_u8, 3);
 			buffer_write(pak, buffer_u8, damage);
 			send_server_tcp(pak);
+		}
+		else if (global.player.revivalTimes < 2)
+		{
+				global.player.rings = 0
+				audio_play_sound(snd_ringlose, 0, false);
+		
+				net_sound_emit(snd_ringlose);
+				net_quick_effect(global.player.x, global.player.y, spr_ringlose);
+		
+				scr_camera_shake(25, 1, 0.2);
+				global.player.isHurt = true;
+				global.player.isJumping = false;
 		}
 	}
 	else

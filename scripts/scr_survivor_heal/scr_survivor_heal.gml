@@ -18,7 +18,7 @@ function scr_survivor_heal()
 		return;
 	}
 	
-	if(global.player.rings < 10)
+	if(global.player.rings < 7)
 	{
 		healObj.visible = false;
 		healObj.progress = 0;
@@ -81,7 +81,7 @@ function scr_survivor_heal()
 				}
 				
 				healObj.progress = 0;
-				global.player.rings -= 10;
+				global.player.rings -= 7;
 			}
 		}
 		else if(healObj.progress > 0)

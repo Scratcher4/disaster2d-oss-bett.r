@@ -218,7 +218,7 @@ function scr_move_basic()
 				}
 			}
 		
-			if(chunkTimer == 20 * 60)
+			if(chunkTimer == 24 * 60)
 				instance_create_depth(0, 0, 0, obj_player_warning);
 		}
 	}

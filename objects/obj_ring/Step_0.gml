@@ -5,7 +5,7 @@ image_index = global.ringFrame;
 	
 if(used)
 	return;
-	
+
 if(visible && image_alpha >= 1 && instance_exists(global.player) && place_meeting(x, y, global.player))
 {
 	if(global.character == CHARACTER_EXE || global.player.revivalTimes >= 2)
