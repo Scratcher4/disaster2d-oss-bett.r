@@ -1,5 +1,6 @@
 activated = false;
 nid = 0;
+iid = 0;
 state = 0;
 
 if(room == room_act9)

@@ -47,6 +47,7 @@ load = function(filename)
 	chaos = buffer_read(_buffer, buffer_bool);
 	exetior = buffer_read(_buffer, buffer_bool);
 	exeller = buffer_read(_buffer, buffer_bool);
+	exeller = buffer_read(_buffer, buffer_bool);
 	achivements = array_create(50, false);
 	prevAchivements = array_create(50, false);
 	changed = [];

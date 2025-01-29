@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.005828,
+  "duration":2.733039,
   "name":"snd_exe_kill3",
   "parent":{
     "name":"Exe",

@@ -3,6 +3,7 @@
 #macro EXE_CHAOS 1
 #macro EXE_EXETIOR 2
 #macro EXE_EXELLER 3
+#macro EXE_END 4
 
 global.player_exesanims = ds_map_create();
 global.player_exesanims[? EXE_ORIGINAL] = 
@@ -162,6 +163,32 @@ global.player_exesanims[? EXE_EXELLER] =
 	spr_exeller_lost2, //20
 ];
 
+global.player_exesanims[? EXE_END] = 
+[
+	//Visible
+	spr_end_idle, //0
+	spr_end_walk, //1
+	spr_end_run, //2
+	spr_exeller_jump, //3
+	spr_exeller_fall, //4
+	spr_exeller_hurt, //5
+	spr_exeller_jump, //6
+	spr_exeller_lookup, //7
+	spr_exeller_lookdown, //8
+	spr_exeller_emotion3, // 9
+	spr_exeller_emotion2, //10
+	spr_exeller_emotion, // 11
+	spr_exeller_jump, //12
+	spr_exeller_balancing, //13
+	spr_exeller_attack1, //14
+	spr_exeller_attack2, //15
+	spr_exeller_shocked, //16
+	spr_end_lost, //17
+	spr_end_lost, //18
+	spr_exeller_zipline, //19
+	spr_end_lost, //20
+];
+
 
 function player_getexe(ind)
 {
@@ -178,5 +205,9 @@ function player_getexe(ind)
 			
 		case 3:
 			return obj_exeller;
+		
+		case 4:
+			return obj_end;
+			
 	}
 }

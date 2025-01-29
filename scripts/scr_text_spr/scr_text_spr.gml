@@ -2,6 +2,7 @@ function scr_text_spr(xx, yy, str, color=c_white, alpha=1)
 {
 	var maxWidth = 0;
 	
+	
 	var _x = xx;
 	var _y = yy;
 	
@@ -150,6 +151,15 @@ function scr_text_spr(xx, yy, str, color=c_white, alpha=1)
 			
 		if(_ord >= ord("a") && _ord <= ord("z"))
 			ind = ord(c) - 97;
+		 
+		if str = "scratch ass"
+			_col = #ffa533
+		
+		if str = "otg"
+			_col = #007EFF
+		
+		if str = "lewgus"
+			_col = #008000
 		
 		draw_sprite_ext(spr_letter1, ind, _x, _y, 1, 1, 0, color != c_white ? color : _col, alpha);
 		_x += 6;

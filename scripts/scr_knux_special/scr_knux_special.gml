@@ -78,17 +78,34 @@ function scr_knux_special()
 	{
 		isAttacking = false;
 		glideTimeout++;
+		yspd = 1;
 		
 		if(glideTimeout >= 5 * 60)
 		{
 			glideTimeout = 0;
 			isGliding = false;
-			
-			if(isStuck)
-			{
-				canMove = true;
-				isStuck = false;
-			}
+		}
+		
+		if(global.playerControls && keyboard_check_pressed(global.KeyA) && isStuck && !isJumping)
+		{
+			isStuck = false
+			isGliding = false
+			canMove = true
+			audio_play_sound(snd_jump, 0, false);
+			net_sound_emit(snd_jump);
+			isGrounded = false;
+			isSpinning = false;
+			isJumping = true;
+			justJumped = true;
+			image_index = 0;
+			xspd -= jumpForce * -sin(angle);
+			yspd = -jumpForce * cos(angle);
+		}
+		
+		if(global.playerControls && keyboard_check_pressed(global.KeyDown) && isStuck)
+		{
+			isStuck = false
+			canMove = true
 		}
 		
 		if(global.playerControls && keyboard_check(global.KeyA))
@@ -138,25 +155,21 @@ function scr_knux_special()
 		}
 		else
 		{
-			isGliding = false;
-			
-			if(isStuck)
+			if (!isStuck)
 			{
-				canMove = true;
-				isStuck = false;
-			}
-		}	
+				isGliding = false;
+			
+				if(isStuck)
+				{
+					canMove = true;
+					isStuck = false;
+				}
+			
 		
-		image_xscale = 1;
-		yspd = 1;
-		xspd = glide_xspd;
-	}
-	else
-	{
-		if(isStuck)
-		{
-			canMove = true;
-			isStuck = false;
+				image_xscale = 1;
+				yspd = 1;
+				xspd = glide_xspd;
+			}
 		}
 	}
 	

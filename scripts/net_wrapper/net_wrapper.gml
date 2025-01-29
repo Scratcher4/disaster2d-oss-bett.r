@@ -72,11 +72,6 @@ function net_poll()
 					
 					buffer_seek(buffer, buffer_seek_start, 0);
 					global.errorCode = buffer_read(buffer, buffer_u32);
-					if global.errorCode == 7
-					{
-						show_debug_message("afk kick was recived, denying...");
-						return;
-					}
 					room_goto(room_message);
 				}
 				return;

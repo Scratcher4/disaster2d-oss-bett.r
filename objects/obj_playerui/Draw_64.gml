@@ -82,6 +82,17 @@ if(instance_exists(global.player) && !global.player.isDead)
 					
 					draw_sprite_ext(spr, 0, prog * 4, 250 - (os_type == os_android ? 200 : 0), 1, 1, 0, prog == 1.0 ? c_white : c_red, prog);
 					break;
+					
+				case EXE_END:
+					var prog = 1.0 - (min(global.player.attackTimer, 180) / 180.0);
+					draw_sprite_ext(spr_gui_exeattack, 0, prog * 10, 240 - (os_type == os_android ? 200 : 0), 1, 1, 0, prog == 1.0 ? c_white : c_red, prog);
+					
+					var prog = global.playerControls && global.player.isJumping;
+					draw_sprite_ext(spr_gui_exefreejump, 0, 3, 218 - (os_type == os_android ? 200 : 0), 1, 1, 0, prog ? c_white : c_red, prog ? 1 : 0.5);
+					
+					var prog = (min(global.player.invisTimer, 0) / END_INVIS_RECHARGE);
+					draw_sprite_ext(spr_gui_exeinvisability, 0, prog * 4, 250 - (os_type == os_android ? 200 : 0), 1, 1, 0, prog == 1.0 ? c_white : c_red, prog);
+					break;
 			}
 			
 			break;

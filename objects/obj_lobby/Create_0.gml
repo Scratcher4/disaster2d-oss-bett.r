@@ -23,6 +23,7 @@ chars =
 	spr_menu_chaos,
 	spr_menu_exetior,
 	spr_menu_exeller,
+	spr_menu_end,
 ];
 
 // Vote

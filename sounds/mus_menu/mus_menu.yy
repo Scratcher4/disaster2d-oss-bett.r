@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":3,
   "conversionMode":0,
-  "duration":73.09642,
+  "duration":0.0,
   "name":"mus_menu",
   "parent":{
     "name":"Music",

@@ -57,6 +57,10 @@ function net_state_charselect(rbuff, nps, isPasstrough)
 				case EXE_EXELLER:
 					audio_play_sound(snd_exeller_laugh, 0, false);
 					break;
+					
+				case EXE_END:
+					audio_play_sound(snd_exeller_laugh, 0, false);
+					break;
 			}
 			break;
 		}
@@ -149,10 +153,10 @@ function net_state_charselect(rbuff, nps, isPasstrough)
 			
 			var table = obj_unlockables.palettes[? global.exeCharacter + PALETTE_EXE];
 			
-			global.palleteFrom = table.from;
+			/*global.palleteFrom = table.from;
 			global.palleteTo = table.to;
 			global.palleteName = table.name;
-			
+			*/
 			audio_play_sound(snd_clock, 0, false);
 			break;
 		}
@@ -204,6 +208,10 @@ function net_state_charselect(rbuff, nps, isPasstrough)
 							break;
 							
 						case EXE_EXELLER:
+							sprite_index = spr_lobby_exeicon4;
+							break;
+							
+						case EXE_END:
 							sprite_index = spr_lobby_exeicon4;
 							break;
 					}

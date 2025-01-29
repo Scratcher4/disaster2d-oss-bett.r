@@ -42,11 +42,15 @@ function scr_tails_special()
 		}
 	}
 	
+	
+	
+	
 	if(isFlying)
 	{
 		isSpinning = false;
-			
-		if(flyGrv < 2)
+		if(global.playerControls && keyboard_check(global.KeyA))
+			flyGrv -= 0.035;		
+		if(flyGrv < 4)
 		{
 			flyGrv += 0.035;
 		}

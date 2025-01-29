@@ -33,6 +33,9 @@ if(place_meeting(x, y, global.player) && !activated)
 	if(global.player.isDead)
 		return;
 	
+	if(isDemon && global.player.redRingTimer > 0)
+		return;
+	
 	if(isDemon && (global.player.revivalTimes >= 2 || global.character == CHARACTER_EXE))
 		return;
 		
@@ -73,14 +76,23 @@ if(place_meeting(x, y, global.player) && !activated)
 					global.player.maxHSpeed = (EXELLER_MAXSPEED * (100-30)) / 100;
 					global.player.alarm[4] = 60 * 3;
 					break;
+				
+				
+				case EXE_END:
+					global.player.isSlow = true;
+					global.player.acc = (END_ACC * (100-30)) / 100;
+					global.player.maxHSpeed = (END_MAXSPEED * (100-30)) / 100;
+					global.player.alarm[4] = 60 * 3;
+					break;
 			}
 			
 			break;
 			
 		default:
 			scr_player_slow(3);
-			break;
+		break;
 	}
+	 
 	 
 	audio_play_sound(snd_egg_tracker_activate, 0, false);
 	net_sound_emit(snd_egg_tracker_activate);

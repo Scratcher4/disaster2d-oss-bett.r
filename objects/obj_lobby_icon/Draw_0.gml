@@ -21,7 +21,7 @@ if(obj_lobby.state == 2 && obj_netclient.nid == master_id && !isSelected)
 		if(obj_netclient.exeId == master_id)
 		{
 			if(selected < 1)
-				selected = 4;
+				selected = 5;
 		}
 		else
 		{
@@ -38,7 +38,7 @@ if(obj_lobby.state == 2 && obj_netclient.nid == master_id && !isSelected)
 		
 		if(obj_netclient.exeId == master_id)
 		{
-			if(selected > 4)
+			if(selected > 5)
 				selected = 1;
 		}
 		else
@@ -103,7 +103,7 @@ y = aY - offset;
 draw_self();
 var _size = scr_text_spr(-2000, -200, nickname);
 scr_text_spr(x - _size/2, aY + 16, nickname);
-
+show_debug_message(nickname)
 if(obj_lobby.state == 2 && !isSelected)
 {
 	if(master_id == obj_netclient.nid)

@@ -2299,6 +2299,7 @@ function net_state_game(rbuff, nps, isPasstrough)
 					show = true;
 			
 			instance_create_depth(global.player.x, global.player.y, 0, obj_demon_indicator);
+			instance_create_depth(global.player.x, global.player.y, 0, obj_exetior_indicator);
 			net_quick_effect(global.player.x, global.player.y + 32, spr_ring_teleport, false, 1, 0, 0, 2);
 			audio_play_sound(snd_demonization, 0, false);
 			
