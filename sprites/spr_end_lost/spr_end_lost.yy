@@ -40,7 +40,7 @@
   ],
   "name":"spr_end_lost",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"End",
     "path":"folders/Sprites/Player/Exes/End.yy",
@@ -144,7 +144,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":46,
-    "yorigin":28,
+    "yorigin":41,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

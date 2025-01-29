@@ -62,6 +62,10 @@ function net_state_results(rbuff, nps, isPasstrough)
 						case 3:
 							_inst.icon = spr_lobby_exeicon4;
 							break;
+						
+						case 4:
+							_inst.icon = spr_lobby_exeicon6;
+							break;
 							
 					}
 					break;

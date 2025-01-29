@@ -48,6 +48,10 @@ if(!obj_minigame.ingame)
 					case 3:
 						sprite = spr_lobby_exeicon4;
 						break;
+					
+					case 4:
+						sprite = spr_lobby_exeicon6;
+						break;
 				}
 			}
 			else

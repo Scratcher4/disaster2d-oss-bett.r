@@ -16,7 +16,7 @@ if(effectTime > 0)
 
 //Actual draw
 scr_palette_swap(global.palleteFrom, global.palleteTo);
-draw_sprite_ext(sprite_index, image_index, floor(x), floor(y), image_xscale, image_yscale, isSpinning ? 0 : radtodeg(angle), image_blend, (hurttime > 0 || isHiding || shockedTimer > 0) ? 0.5 : image_alpha);
+draw_sprite_ext(sprite_index, image_index, floor(x), floor(y) - 2, image_xscale, image_yscale, isSpinning ? 0 : radtodeg(angle), image_blend, (hurttime > 0 || isHiding || shockedTimer > 0) ? 0.5 : image_alpha);
 shader_reset();
 
 //hakc

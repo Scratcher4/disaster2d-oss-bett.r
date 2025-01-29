@@ -145,6 +145,10 @@ function net_state_charselect(rbuff, nps, isPasstrough)
 					case EXE_EXELLER:
 						sprite_index = spr_lobby_exeicon4;
 						break;
+					
+					case EXE_END:
+						sprite_index = spr_lobby_exeicon6;
+						break;
 				}
 				
 				image_index = 0;
@@ -156,7 +160,7 @@ function net_state_charselect(rbuff, nps, isPasstrough)
 			/*global.palleteFrom = table.from;
 			global.palleteTo = table.to;
 			global.palleteName = table.name;
-			*/
+			*/ // i ate your shitty palettes,
 			audio_play_sound(snd_clock, 0, false);
 			break;
 		}
@@ -212,7 +216,7 @@ function net_state_charselect(rbuff, nps, isPasstrough)
 							break;
 							
 						case EXE_END:
-							sprite_index = spr_lobby_exeicon4;
+							sprite_index = spr_lobby_exeicon6;
 							break;
 					}
 					
