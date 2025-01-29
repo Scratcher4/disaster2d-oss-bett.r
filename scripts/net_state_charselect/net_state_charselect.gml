@@ -59,7 +59,7 @@ function net_state_charselect(rbuff, nps, isPasstrough)
 					break;
 					
 				case EXE_END:
-					audio_play_sound(snd_exeller_laugh, 0, false);
+					//audio_play_sound(snd_exeller_laugh, 0, false);
 					break;
 			}
 			break;

@@ -1190,6 +1190,7 @@
     {"name":"spr_lobby_exeicon3","order":4,"path":"sprites/spr_lobby_exeicon3/spr_lobby_exeicon3.yy",},
     {"name":"spr_lobby_exeicon4","order":5,"path":"sprites/spr_lobby_exeicon4/spr_lobby_exeicon4.yy",},
     {"name":"spr_lobby_exeicon5","order":6,"path":"sprites/spr_lobby_exeicon5/spr_lobby_exeicon5.yy",},
+    {"name":"spr_lobby_exeicon6","order":16,"path":"sprites/spr_lobby_exeicon6/spr_lobby_exeicon6.yy",},
     {"name":"spr_lobby_icon_arrow","order":7,"path":"sprites/spr_lobby_icon_arrow/spr_lobby_icon_arrow.yy",},
     {"name":"spr_lobby_icon_used","order":8,"path":"sprites/spr_lobby_icon_used/spr_lobby_icon_used.yy",},
     {"name":"spr_lobby_icon","order":11,"path":"sprites/spr_lobby_icon/spr_lobby_icon.yy",},

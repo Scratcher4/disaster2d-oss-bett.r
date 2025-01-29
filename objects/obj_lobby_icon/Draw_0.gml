@@ -85,6 +85,10 @@ if(obj_lobby.state == 2 && obj_netclient.nid == master_id && !isSelected)
 			case 4:
 				sprite_index = spr_lobby_exeicon4;
 				break;
+			
+			case 5:
+				sprite_index = spr_lobby_exeicon6;
+				break;
 		}
 		
 		image_blend = c_gray;
@@ -103,7 +107,7 @@ y = aY - offset;
 draw_self();
 var _size = scr_text_spr(-2000, -200, nickname);
 scr_text_spr(x - _size/2, aY + 16, nickname);
-show_debug_message(nickname)
+
 if(obj_lobby.state == 2 && !isSelected)
 {
 	if(master_id == obj_netclient.nid)

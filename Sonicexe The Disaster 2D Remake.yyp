@@ -1327,6 +1327,7 @@
     {"id":{"name":"spr_lobby_exeicon3","path":"sprites/spr_lobby_exeicon3/spr_lobby_exeicon3.yy",},},
     {"id":{"name":"spr_lobby_exeicon4","path":"sprites/spr_lobby_exeicon4/spr_lobby_exeicon4.yy",},},
     {"id":{"name":"spr_lobby_exeicon5","path":"sprites/spr_lobby_exeicon5/spr_lobby_exeicon5.yy",},},
+    {"id":{"name":"spr_lobby_exeicon6","path":"sprites/spr_lobby_exeicon6/spr_lobby_exeicon6.yy",},},
     {"id":{"name":"spr_lobby_icon_arrow","path":"sprites/spr_lobby_icon_arrow/spr_lobby_icon_arrow.yy",},},
     {"id":{"name":"spr_lobby_icon_used","path":"sprites/spr_lobby_icon_used/spr_lobby_icon_used.yy",},},
     {"id":{"name":"spr_lobby_icon","path":"sprites/spr_lobby_icon/spr_lobby_icon.yy",},},

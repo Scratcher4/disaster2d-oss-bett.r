@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_exe_idle",
-    "path":"sprites/spr_exe_idle/spr_exe_idle.yy",
+    "name":"spr_end_idle",
+    "path":"sprites/spr_end_idle/spr_end_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,
